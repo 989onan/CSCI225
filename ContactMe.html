@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html lang="EN">
+    <head>
+        <title>
+            Contact Me
+        </title>
+        <style>
+            #textbox{
+                height:100px;
+                width:200px;
+            }
+        </style>
+    </head>
+    <body>
+        <iframe width="560" height="315" src="https://www.youtube.com/watch?v=t8qggOJSBF0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <form name="feedback">
+            <input type="text" placeholder="anonymous" name="fname" required><br>
+            <input type="text" placeholder="anonymous" name="lname" required><br>
+            <input type="email" placeholder="name@domain.com" name="mail" required><br>
+            <input type="radio" name="recommend" value="yes"><label>yes</label>
+            <input type="radio" name="recommend" value="no"><label>no</label>
+            <br>
+            <select multiple size="2" name="favoritewebsite">
+                <option value="google">Google</option>
+                <option value="facebook">Facebook</option>
+                <option value="twitter">Twitter</option>
+                <option value="time">Time</option>
+                <option value="youtube">Youtube</option>
+            </select><br>
+            <label>How good is your one chosen website from 1-10?</label><br>
+            <input name="rating" type="range" max="10" min="1">
+            <br>
+            <input type="text" id="textbox" name="comment" placeholder="comments"><br>
+            <input type="submit" value="submit">
+        </form>
+
+
+    </body>
+</html>

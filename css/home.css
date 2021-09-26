@@ -1,0 +1,107 @@
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    table-layout:fixed
+}
+
+body{
+    background-image: url("../img/DysonSpereAlphaNight.png");
+    background-color: grey;
+}
+
+@font-face {
+    font-family: 'spaceage';
+    src: url("../fonts/spaceage.ttf");
+}
+div.introduction p{
+    
+    position: absolute;
+    
+    float:left;
+    width:60%;
+}
+li{
+    font-family: 'Times New Roman', Times, serif;
+    color: chocolate;
+    font-weight: 100;
+}
+h1{
+    text-transform: uppercase;
+    letter-spacing: 10px;
+}
+
+p{
+    font-family: 'spaceage', Times;
+    font-size: 12px;
+    line-height: 100%;
+    text-align: left;
+}
+div.introduction img{
+    width:40%;
+    position: absolute;
+    left: 60%;
+}
+
+div.assignment{
+    
+    width:40%;
+    position:absolute;
+    left:60%;
+    top:600px;
+}
+
+div.contact{
+    border-right: 3px;
+    border-style: solid;
+    border-bottom: 3px;
+    border-color: #fff;
+    position:absolute;
+    top:700px;
+    
+}
+
+div.portfolio{
+    border-right: 3px;
+    border-style: solid;
+    border-bottom: 3px;
+    border-color: #fff;
+    position:absolute;
+    top:800px;
+    width:60%;
+}
+
+div.schedule{
+    border-right: 3px;
+    border-style: solid;
+    border-bottom: 3px;
+    border-color: #fff;
+    position:absolute;
+    top:1800px;
+    width:60%;
+}
+
+col{
+    width:200px; 
+    height: 100px;
+}
+a{
+    text-decoration: none;
+    color:darkblue;
+}
+a:hover{
+    text-decoration: none;
+    color:darkgreen;
+}
+footer{
+    position:fixed;
+    bottom: 0px;
+}
+ul.navigation li{
+    float: left;
+    font-size:20px;
+    list-style: none;
+    padding-left:10%;
+}
+ul.navigation{
+    width:100%;
+}

@@ -5,37 +5,69 @@
         <title>
             Contact Me
         </title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/home.css">
         <style>
             #textbox{
                 height:100px;
                 width:200px;
             }
+            .wrapper{
+                display: grid;
+            }
+            .navigation{
+                grid-column: 1/4;
+                grid-row: 1/2;
+            }
+            .video{
+                grid-column: 1/2;
+                grid-row: 2/2;
+            }
+            .form{
+                
+                grid-column: 2/2;
+                grid-row: 2/2;
+            }
         </style>
     </head>
     <body>
-        <iframe width="560" height="315" src="https://www.youtube.com/watch?v=t8qggOJSBF0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <form name="feedback">
-            <input type="text" placeholder="anonymousFirstName" name="fname" required><br>
-            <input type="text" placeholder="anonymousLastName" name="lname" required><br>
-            <input type="email" placeholder="name@domain.com" name="mail" required><br>
-            <p>Would you recomend this website to others?</p>
-            <input type="radio" name="recommend" value="yes"><label>yes</label>
-            <input type="radio" name="recommend" value="no"><label>no</label>
-            <br>
-            <select multiple size="2" name="favoritewebsite">
-                <option value="google">Google</option>
-                <option value="facebook">Facebook</option>
-                <option value="twitter">Twitter</option>
-                <option value="time">Time</option>
-                <option value="youtube">Youtube</option>
-            </select><br>
-            <label>How good is your one chosen website from 1-10?</label><br>
-            <input name="rating" type="range" max="10" min="1">
-            <br>
-            <input type="text" id="textbox" name="comment" placeholder="comments"><br>
-            <input type="submit" value="submit">
-        </form>
+        <div class="wrapper">
+            <ul class="navigation">
+                <li><a class = "p-3 mb-2 bg-success text-white" href="https://usca.edu/">USCA Website</a></li>
+                <li><a class = "p-3 mb-2 bg-success text-white"href="#assignments">Assignments</a></li>
+                <li><a class = "p-3 mb-2 bg-success text-white"href="ContactMe.html">Contact</a></li>
+                <li><a class = "p-3 mb-2 bg-success text-white"href="https://authors.curseforge.com/members/989onan">Curse Forge</a></li>
+                <li><a class = "p-3 mb-2 bg-success text-white"href="https://github.com/989onan">Git Hub</a></li>
+            </ul>
 
 
+            <iframe class="video rounded" width="560" height="315" src="https://www.youtube.com/watch?v=t8qggOJSBF0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <form name="feedback" class="form form-group">
+                <input type="text" class = "form-control" placeholder="anonymousFirstName" name="fname" required><br>
+                <input type="text" class = "form-control" placeholder="anonymousLastName" name="lname" required><br>
+                <input type="email" class = "form-control" placeholder="name@domain.com" name="mail" required><br>
+                <p>Would you recomend this website to others?</p>
+                <input type="radio" class = "form-control" name="recommend" value="yes"><label>yes</label>
+                <input type="radio" class = "form-control" name="recommend" value="no"><label>no</label>
+                <br>
+                <select multiple size="2" name="favoritewebsite" class="form-check">
+                    <option class="form-check-input" value="google">Google</option>
+                    <option class="form-check-input" value="facebook">Facebook</option>
+                    <option class="form-check-input" value="twitter">Twitter</option>
+                    <option class="form-check-input" value="time">Time</option>
+                    <option class="form-check-input" value="youtube">Youtube</option>
+                </select><br>
+                <label>How good is your one chosen website from 1-10?</label><br>
+                <input name="rating" class = "form-range" type="range" max="10" min="1">
+                <br>
+                <input type="password" class = "form-control" name="password" placeholder="password">
+                <br>
+                <small class="form-text text-muted">Your password</small>
+                <br>
+                <input type="text" id="textbox" name="comment" class = "form-control" placeholder="comments"><br>
+                <input type="submit" value="submit">
+            </form>
+
+        </div>
     </body>
 </html>

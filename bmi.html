@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/home.css">
+        <title>BMI Calculator</title>
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <ul class="navigation">
+            <li><a class = "p-3 mb-2 bg-success text-white" href="https://usca.edu/">USCA Website</a></li>
+            <li><a class = "p-3 mb-2 bg-success text-white"href="#assignments">Assignments</a></li>
+            <li><a class = "p-3 mb-2 bg-success text-white"href="ContactMe.html">Contact</a></li>
+            <li><a class = "p-3 mb-2 bg-success text-white"href="https://authors.curseforge.com/members/989onan">Curse Forge</a></li>
+            <li><a class = "p-3 mb-2 bg-success text-white"href="https://github.com/989onan">Git Hub</a></li>
+        </ul>
+
+        <div class="BMI">
+            <input id="weight" placeholder="pounds" type="text"><label>Weight</label><br> 
+            <input id="height" placeholder="inches" type="text"><label>Height</label><br>
+            <input id="name" placeholder = "Name" type="text"><br>
+            <select id="age">
+                <option> under 20 </option>
+                <option> 20-34 </option>
+                <option> 35-39</option>
+                <option> 40-44 </option>
+                <option> 45-49 </option>
+                <option> 50-54 </option>
+                <option> 55-59 </option>
+                <option> 60-64 </option>
+            </select><label>Age</label><br>
+            <img src="img/Female_Mii.png">
+            <button id="calcbmi">Compute BMI</button><br>
+            <p id="bmiresult">
+
+            </p>
+            <script>
+                document.getElementById("calcbmi").addEventListener("click",calcbmi,false);
+                function calcbmi(){
+                    var weight = document.getElementById("weight").value;
+                    var height = document.getElementById("height").value;
+                    if(isNaN(weight) || isNaN(height)){
+                        alert("Please enter a weight and height as a number!");
+                        return;
+                    }
+                    weight = parseFloat(weight);
+                    height = parseFloat(height);
+
+                    var BMI = weight*703/(height*height);
+
+                    BMI = Math.round(BMI*100)/100;
+
+                    var e2 = document.getElementById("age").selectedIndex;
+                    switch(e2){
+                        case 0: alert("Use a BMI percentile chart! https://www.cdc.gov/growthcharts/data/set1clinical/cj41l023.pdf"); return; break;
+                        case 1: break;
+                        case 2: break;
+                        case 3: break;
+                        case 4: break;
+                        case 5: break;
+                        case 6: break;
+                        case 7: break;
+                    }
+
+                    if(BMI >= 28){
+                        alert("You may be overweight!");
+                        window.open("http://www.nhlbi.nih.gov/health/public/heart/obesity/lose_wt/control.htm");
+                    }
+                    document.getElementById("bmiresult").innerHTML = "Your BMI is: "+BMI;
+                }
+            </script>
+        </div>
+
+
+
+        
+    </body>
+</html>
